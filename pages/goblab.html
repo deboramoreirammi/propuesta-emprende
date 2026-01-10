@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GobLab Gran Canaria</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top Navigation -->
+
+<!-- <header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e5e7eb] dark:border-b-gray-700 bg-white/90 dark:bg-[#101922]/90 backdrop-blur-md px-4 py-3 md:px-10">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-3xl">token</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] hidden sm:block">Fundación Emprende Canarias</h2>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] sm:hidden">FEC</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+
+<nav class="hidden md:flex items-center gap-6 lg:gap-9">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#que-es">Qué es</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#metodologia">Metodología</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#prototipos">Prototipos</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#mentorias">Mentorías</a>
+</nav>
+
+<div class="flex items-center gap-4">
+<a class="md:hidden text-sm font-medium" href="#">Menú</a>
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-blue-600 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Únete al programa</span>
+</button>
+</div>
+</div>
+</header> -->
+
+<header class="sticky top-0 z-50 w-full bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-sm pt-4 pb-2">
+<div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined text-2xl">apartment</span>
+</div>
+<div class="flex flex-col">
+<h2 class="text-lg font-extrabold leading-none tracking-tight text-text-main dark:text-white">Fundación Emprende</h2>
+<span class="text-[0.65rem] font-bold tracking-widest text-primary uppercase">Canarias Innova</span>
+</div>
+</div>
+
+<!-- <nav class="hidden md:flex flex-1 justify-center items-center gap-10">
+<a class="text-sm font-semibold text-primary" href="#">Inicio</a>
+<a class="text-sm font-medium text-text-secondary hover:text-primary transition-colors" href="#">GobLab</a>
+<a class="text-sm font-medium text-text-secondary hover:text-primary transition-colors" href="#">Prototipos</a>
+<a class="text-sm font-medium text-text-secondary hover:text-primary transition-colors" href="#">Mentorías</a>
+<a class="text-sm font-medium text-text-secondary hover:text-primary transition-colors" href="#">Programa Piloto</a>
+</nav>
+<div class="hidden md:flex items-center gap-4">
+<button class="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-text-main bg-gray-100 rounded-full hover:bg-gray-200 transition-colors">
+<span class="material-symbols-outlined text-lg">search</span>
+                        Buscar
+                    </button>
+<button class="flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/30 hover:bg-primary-dark transition-all transform hover:-translate-y-0.5">
+<span class="truncate">Contactar</span>
+</button>
+</div> -->
+
+<div class="flex flex-1 justify-end gap-8">
+            <div class="hidden md:flex items-center gap-9">
+              <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary" href="../index.html">Inicio</a>
+              <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary" href="goblab.html">GobLab</a>
+              <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary" href="prototipos.html">Prototipos</a>
+              <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary" href="mentorias.html">Mentorias</a>
+              <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary" href="programaPiloto.html">Programa de validacion 2026</a>
+            </div>
+            <!-- <button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-primary-dark text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+              <span class="truncate">Contacto</span>
+            </button> -->
+
+            <a href="contacto.html"
+   class="flex min-w-[84px] items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-primary-dark text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+  <span class="truncate">Contacto</span>
+</a>
+
+</div>
+
+<div class="md:hidden">
+<button class="text-text-main dark:text-white p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+
+
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative flex flex-col items-center justify-center overflow-hidden bg-background-light dark:bg-background-dark pt-10 pb-16 md:py-20 lg:py-24">
+<div class="absolute inset-0 z-0 opacity-10 dark:opacity-20 pointer-events-none" style="background-image: radial-gradient(#137fec 1px, transparent 1px); background-size: 32px 32px;"></div>
+<div class="layout-content-container flex flex-col max-w-[1100px] w-full px-4 md:px-10 z-10">
+<div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-12">
+<!-- Hero Content -->
+<div class="flex flex-col gap-6 lg:w-1/2">
+<div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary dark:text-blue-400">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Vinculado al Cabildo de Gran Canaria</span>
+</div>
+<h1 class="font-display text-4xl font-black leading-tight tracking-[-0.033em] text-[#111418] dark:text-white md:text-5xl lg:text-6xl">
+                                GobLab <span class="text-primary">Gran Canaria</span>
+</h1>
+<h2 class="text-lg font-normal leading-relaxed text-[#4e5d6d] dark:text-gray-300">
+                                Laboratorio de innovación pública vinculado al Cabildo de Gran Canaria desde 2023. Impulsamos la inteligencia artificial y la modernización administrativa para servir mejor a la ciudadanía.
+                            </h2>
+<div class="flex flex-wrap gap-4 pt-2">
+<!-- <button class="flex cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-blue-600 text-white text-base font-bold transition-all shadow-lg shadow-primary/20">
+                                    Explorar Prototipos
+                                </button> -->
+
+                                <a href="prototipos.html">
+  <button class="flex cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-blue-600 text-white text-base font-bold transition-all shadow-lg shadow-primary/20">
+    Explorar Prototipos
+  </button>
+</a>
+
+<!-- <button class="flex cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-white dark:bg-[#1e2a35] border border-[#dbe0e6] dark:border-gray-700 hover:border-primary text-[#111418] dark:text-white text-base font-bold transition-all">
+                                    Conocer metodología
+                                </button> -->
+
+                                <a href="goblab.html#metodologia"
+   class="flex cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-white dark:bg-[#1e2a35] border border-[#dbe0e6] dark:border-gray-700 hover:border-primary text-[#111418] dark:text-white text-base font-bold transition-all">
+  Conocer metodología
+</a>
+
+</div>
+</div>
+<!-- Hero Image -->
+<div class="lg:w-1/2 mt-8 lg:mt-0">
+<div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-gray-200 dark:bg-gray-800" data-alt="People collaborating in a modern office with sticky notes on glass wall" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAD6-2YWwL2e9cWVUh6TiFPoLXg5AmD-9_D2TNSYXbu0SUBz9FV7BlT56A8XGLpn4HUH7hb0llYjxRlv4STilyT_MqlJ-hlrZr39QpVzSeYiHYQ0b07gmm5UFntRecl9FIiD2UPKyI6Wrs2Dfv_rLX1Wvwg5gio9fdlJjdDMiPBdmCpCsKWfJEKJVa2qF7FJlVJ6dgVrTXSFPsr7bAiHZUM5cN7AQvnWyjqZNItujtp4YCA9ti3unCucSnx_Fosow6n37s-neDn'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<p class="font-bold text-lg">Innovación en acción</p>
+<p class="text-sm opacity-90">Sesión de co-creación 2024</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- What is GobLab Section -->
+<section class="py-16 px-4 md:px-10 flex justify-center bg-white dark:bg-[#161e27]" id="que-es">
+<div class="max-w-[1100px] w-full flex flex-col gap-10">
+<div class="flex flex-col gap-4 max-w-[720px]">
+<h2 class="text-[#111418] dark:text-white text-[32px] font-bold leading-tight md:text-4xl tracking-tight">
+                            Qué es el GobLab
+                        </h2>
+<p class="text-[#4e5d6d] dark:text-gray-300 text-lg font-normal leading-relaxed">
+                            Un espacio de experimentación para transformar la administración pública mediante metodologías ágiles y tecnologías emergentes.
+                        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Feature 1 -->
+<div class="flex flex-col gap-4 p-6 rounded-xl border border-[#e5e7eb] dark:border-gray-700 bg-background-light dark:bg-[#1e2a35] hover:border-primary/50 transition-colors group">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">lightbulb</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-xl font-bold text-[#111418] dark:text-white">Innovación Pública</h3>
+<p class="text-[#4e5d6d] dark:text-gray-400">Rediseño de servicios centrados en el ciudadano utilizando Design Thinking.</p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="flex flex-col gap-4 p-6 rounded-xl border border-[#e5e7eb] dark:border-gray-700 bg-background-light dark:bg-[#1e2a35] hover:border-primary/50 transition-colors group">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">smart_toy</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-xl font-bold text-[#111418] dark:text-white">Inteligencia Artificial</h3>
+<p class="text-[#4e5d6d] dark:text-gray-400">Aplicación ética de IA para automatizar procesos y mejorar la toma de decisiones.</p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="flex flex-col gap-4 p-6 rounded-xl border border-[#e5e7eb] dark:border-gray-700 bg-background-light dark:bg-[#1e2a35] hover:border-primary/50 transition-colors group">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">groups</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-xl font-bold text-[#111418] dark:text-white">Colaboración</h3>
+<p class="text-[#4e5d6d] dark:text-gray-400">Co-creación abierta con empleados públicos, ciudadanía y sector privado.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Methodology Section -->
+<section class="py-16 px-4 md:px-10 flex justify-center bg-background-light dark:bg-background-dark" id="metodologia">
+<div class="max-w-[1100px] w-full flex flex-col">
+<div class="mb-10">
+<h2 class="text-[#111418] dark:text-white text-[28px] md:text-[32px] font-bold leading-tight">Nuestra Metodología</h2>
+<p class="text-[#4e5d6d] dark:text-gray-400 mt-2">Un proceso iterativo de 4 fases para garantizar soluciones efectivas.</p>
+</div>
+<!-- Timeline Component -->
+<div class="relative">
+<!-- Connecting Line (Desktop) -->
+<div class="hidden md:block absolute top-6 left-6 right-6 h-0.5 bg-gray-200 dark:bg-gray-700 z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+<!-- Step 1 -->
+<div class="flex flex-row md:flex-col items-start md:items-center gap-4">
+<div class="flex-shrink-0 size-12 rounded-full bg-white dark:bg-[#1e2a35] border-2 border-primary flex items-center justify-center text-primary shadow-sm z-10">
+<span class="material-symbols-outlined">search</span>
+</div>
+<div class="flex flex-col md:text-center pt-2 md:pt-4">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">1. Definición del reto</h3>
+<p class="text-sm text-[#4e5d6d] dark:text-gray-400 mt-1">Identificación clara del problema público a resolver.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-row md:flex-col items-start md:items-center gap-4">
+<div class="flex-shrink-0 size-12 rounded-full bg-white dark:bg-[#1e2a35] border-2 border-primary flex items-center justify-center text-primary shadow-sm z-10">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<div class="flex flex-col md:text-center pt-2 md:pt-4">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">2. Ideación</h3>
+<p class="text-sm text-[#4e5d6d] dark:text-gray-400 mt-1">Generación de múltiples soluciones creativas.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-row md:flex-col items-start md:items-center gap-4">
+<div class="flex-shrink-0 size-12 rounded-full bg-white dark:bg-[#1e2a35] border-2 border-primary flex items-center justify-center text-primary shadow-sm z-10">
+<span class="material-symbols-outlined">build</span>
+</div>
+<div class="flex flex-col md:text-center pt-2 md:pt-4">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">3. Prototipado</h3>
+<p class="text-sm text-[#4e5d6d] dark:text-gray-400 mt-1">Construcción rápida de modelos de bajo coste.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-row md:flex-col items-start md:items-center gap-4">
+<div class="flex-shrink-0 size-12 rounded-full bg-white dark:bg-[#1e2a35] border-2 border-primary flex items-center justify-center text-primary shadow-sm z-10">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<div class="flex flex-col md:text-center pt-2 md:pt-4">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">4. Validación</h3>
+<p class="text-sm text-[#4e5d6d] dark:text-gray-400 mt-1">Testeo con usuarios reales para iterar o escalar.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- Prototypes Section -->
+<section class="py-16 px-4 md:px-10 flex justify-center bg-white dark:bg-[#161e27]" id="prototipos">
+<div class="max-w-[1100px] w-full flex flex-col gap-10">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+<div class="flex flex-col gap-2">
+<h2 class="text-[#111418] dark:text-white text-[32px] font-bold leading-tight">Prototipos desarrollados</h2>
+<p class="text-[#4e5d6d] dark:text-gray-400 text-lg">Explora nuestras últimas soluciones de innovación pública.</p>
+</div>
+<a class="text-primary font-bold hover:underline inline-flex items-center gap-1" href="prototipos.html">
+                            Ver todo el portfolio <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project Card 1 -->
+<div class="flex flex-col rounded-xl overflow-hidden border border-[#e5e7eb] dark:border-gray-700 hover:shadow-lg transition-shadow bg-background-light dark:bg-[#1e2a35] group">
+<div class="h-48 bg-gray-200 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Data visualization dashboard on a screen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAKjfvnbuDNhRAo8uAwce9FrkPmyhpwyHbAfN8nR23FTcbuhccghQnsnlVoxgU9c0m3q5HDwpMeTIN6vlxuQTZYt-xdZttK6wm1hVhy4Qm6B3mmNa7fhAOKQIKxKFqxJUjXPlGdEv65iSciEU9jZXtv-zMB4DvWtIjxhl2b-0LK4mgjSAm72_ky8nrGV52CPC5fM7DcPf55qTnRb9gp3P_bTwSteKr7FzwRrYVk6wi5NqqQbr6yEkflGH-cln9ddBLZZ50aQmRM');"></div>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-black/80 px-2 py-1 rounded text-xs font-bold text-[#111418] dark:text-white backdrop-blur-sm">
+                                    Inteligencia Artificial
+                                </div>
+</div>
+<div class="flex flex-col p-5 gap-3">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Chatbot Tributario</h3>
+<p class="text-sm text-[#4e5d6d] dark:text-gray-400 line-clamp-2">Asistente virtual basado en LLMs para resolver dudas frecuentes de la ciudadanía sobre impuestos locales.</p>
+<a class="mt-2 text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                                    Ver detalles <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="flex flex-col rounded-xl overflow-hidden border border-[#e5e7eb] dark:border-gray-700 hover:shadow-lg transition-shadow bg-background-light dark:bg-[#1e2a35] group">
+<div class="h-48 bg-gray-200 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="People sitting around a table discussing documents" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnVBo71H7DNTrjQH_mQQhuCZqN7oPlrd-m9zVSiGHGai1uYohtGIkHOF-E-I5cUsGAbpwL8GxYTiLJba0Y9Jqo-dToPNHwzu-umSTEvBqmUb7gNsZe1Ror6CL5Q2_BH_YtkeLw1Kt2v-sRCxTSGv3w4FQ_8z40b96ZWmYlDDhX8tzIhLOpIgsnTFNlSRT81-B7zyJi3022wo-a5mBa5OWsOAa54onM8okAL1l5Y-VD6iAi5pEcMzDWVAWQ_-elUFaLp3cN3YUZ');"></div>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-black/80 px-2 py-1 rounded text-xs font-bold text-[#111418] dark:text-white backdrop-blur-sm">
+                                    Simplificación
+                                </div>
+</div>
+<div class="flex flex-col p-5 gap-3">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Trámite Fácil</h3>
+<p class="text-sm text-[#4e5d6d] dark:text-gray-400 line-clamp-2">Rediseño integral del proceso de solicitud de subvenciones para reducir tiempos de espera en un 40%.</p>
+<a class="mt-2 text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                                    Ver detalles <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="flex flex-col rounded-xl overflow-hidden border border-[#e5e7eb] dark:border-gray-700 hover:shadow-lg transition-shadow bg-background-light dark:bg-[#1e2a35] group">
+<div class="h-48 bg-gray-200 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Abstract digital network visualization" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVba51wTjuO41Kf2qKbYGr57o_sVWEpM6qVgFv225Y7o5faIQhl5ZdbQ_Ec6qkHQnjqukNYWN3Y2e4MMngPMr3YgAEd_CNTdFLPuxRurYIRBhIdcegdYOzh_KyQ5yQYa36Okwja3njGhmEQ7OJ0KK9f9u_AGnkyO55NetjknExcjtpYdU1uLlZs-vKJYq-7G7MwQPOAdS1PvUNuOFLyAdd_TeeTvT-q7dIF3itBXCKHKREiLjy7xXnAD_37JzKkmGE3JVUfWtP');"></div>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-black/80 px-2 py-1 rounded text-xs font-bold text-[#111418] dark:text-white backdrop-blur-sm">
+                                    Datos Abiertos
+                                </div>
+</div>
+<div class="flex flex-col p-5 gap-3">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Portal de Transparencia 2.0</h3>
+<p class="text-sm text-[#4e5d6d] dark:text-gray-400 line-clamp-2">Plataforma interactiva para visualizar el gasto público en tiempo real mediante gráficos dinámicos.</p>
+<a class="mt-2 text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                                    Ver detalles <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- Mentorship Section -->
+<section class="py-16 md:py-24 px-4 md:px-10 flex justify-center bg-background-light dark:bg-background-dark" id="mentorias">
+<div class="max-w-[1100px] w-full bg-white dark:bg-[#1e2a35] rounded-3xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700">
+<div class="flex flex-col md:flex-row">
+<div class="md:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center gap-6">
+<div class="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-wider text-xs">
+<span class="w-8 h-[2px] bg-primary"></span>
+                                Mentorías
+                            </div>
+<h2 class="text-3xl md:text-4xl font-bold text-[#111418] dark:text-white leading-tight">
+                                Acompañamiento experto para tu entidad
+                            </h2>
+<p class="text-[#4e5d6d] dark:text-gray-300 text-lg">
+                                Ofrecemos sesiones de mentoría personalizada para departamentos del Cabildo y ayuntamientos de la isla que quieran iniciar procesos de innovación.
+                            </p>
+<ul class="flex flex-col gap-3 mt-2">
+<li class="flex items-center gap-3 text-[#111418] dark:text-gray-200">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                                    Diagnóstico de madurez digital
+                                </li>
+<li class="flex items-center gap-3 text-[#111418] dark:text-gray-200">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                                    Asesoramiento en compra pública innovadora
+                                </li>
+<li class="flex items-center gap-3 text-[#111418] dark:text-gray-200">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                                    Formación en metodologías ágiles
+                                </li>
+</ul>
+<!-- <button class="mt-4 w-fit px-6 py-3 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-lg font-bold transition-all">
+                                Ver más
+                            </button> -->
+
+                            <a href="mentorias.html"
+   class="mt-4 w-fit px-6 py-3 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-lg font-bold transition-all inline-block">
+  Ver más
+</a>
+
+</div>
+<div class="md:w-1/2 min-h-[300px] md:min-h-auto bg-gray-200 relative" data-alt="Woman explaining something on a whiteboard to a colleague" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDcpOlDmFxgCUBNJstcpjSIVq5IvmJgKw-gvbJ2N6HI-RjUZ36hfydoll2dDT4grlse8OJB9iW5CzmUFSVewlH8oFNDhH4gLtjTvFVbI4DMancgMz0Vwcc3A3KV1EUw_i-hNe7FWuFn8cuRVM-vC-Mz2w1UArgqhe2POBa_nBy_I5n4e2GzSozLigPrekAwnYgBk3gb6MvuJMlF93-P-1sMALrQawCvVwq-diQTS-G4nw4edvyl-MeKqTWftjGxNUdh0J7iP0Ld'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA: Validation Program -->
+<section class="py-20 px-4 md:px-10 bg-[#101922] relative overflow-hidden flex justify-center text-white">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/30 to-[#101922] z-0"></div>
+<!-- Abstract pattern -->
+<div class="absolute right-0 top-0 h-full w-1/2 opacity-10" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, #ffffff 10px, #ffffff 11px);"></div>
+<div class="max-w-[960px] w-full flex flex-col items-center text-center gap-8 relative z-10">
+<span class="px-4 py-1 rounded-full bg-white/10 border border-white/20 text-sm font-medium text-blue-200">
+                        Convocatoria Abierta
+                    </span>
+<h2 class="text-4xl md:text-5xl font-black tracking-tight leading-tight">
+                        Programa de Validación 2026
+                    </h2>
+<p class="text-xl text-gray-300 max-w-2xl">
+                        ¿Tienes un reto en tu administración? Participa en nuestro próximo ciclo de validación. Te ayudamos a prototipar la solución.
+                    </p>
+<div class="flex flex-wrap justify-center gap-4 text-sm font-bold uppercase tracking-wide text-blue-300">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xl">money_off</span> Sin Coste
+                        </div>
+<div class="w-1.5 h-1.5 rounded-full bg-blue-300 hidden sm:block"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xl">handshake</span> Sin Compromiso
+                        </div>
+<div class="w-1.5 h-1.5 rounded-full bg-blue-300 hidden sm:block"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-xl">rocket_launch</span> 100% Práctico
+                        </div>
+</div>
+<button class="mt-4 flex min-w-[200px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-primary hover:bg-blue-500 text-white text-lg font-bold shadow-xl shadow-blue-900/50 transition-all transform hover:scale-105">
+                        Inscribirse Ahora
+                    </button>
+<p class="text-xs text-gray-400 mt-2">Plazas limitadas para entidades locales de Gran Canaria.</p>
+</div>
+</section>
+</main>
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer class="bg-background-light dark:bg-background-dark border-t border-[#f0f2f4] dark:border-[#2a3441] py-10">
+<div class="layout-container flex justify-center w-full">
+<div class="px-4 lg:px-40 flex flex-1 justify-center">
+<div class="layout-content-container flex flex-col md:flex-row justify-between max-w-[960px] flex-1 px-4 gap-8">
+<div class="flex flex-col gap-4 max-w-[300px]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">account_balance</span>
+<span class="text-[#111418] dark:text-white font-bold">Fundación Emprende Canarias</span>
+</div>
+<p class="text-sm text-[#617589] dark:text-gray-500">Impulsando la innovación y la transformación digital en el sector público de Canarias.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-[#111418] dark:text-white font-bold text-sm uppercase tracking-wider">Enlaces</h4>
+<div class="flex flex-col gap-2">
+<a class="text-sm text-[#617589] dark:text-gray-400 hover:text-primary" href="#">Bases Legales</a>
+<a class="text-sm text-[#617589] dark:text-gray-400 hover:text-primary" href="#">Política de Privacidad</a>
+<a class="text-sm text-[#617589] dark:text-gray-400 hover:text-primary" href="#">GobLab Gran Canaria</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-[#111418] dark:text-white font-bold text-sm uppercase tracking-wider">Contacto</h4>
+<div class="flex flex-col gap-2">
+<a class="text-sm text-[#617589] dark:text-gray-400 hover:text-primary flex items-center gap-2" href="mailto:hola@emprendecanarias.org">
+<span class="material-symbols-outlined text-base">mail</span> hola@emprendecanarias.org
+                            </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mt-10 pt-6 border-t border-gray-200 dark:border-gray-800">
+<p class="text-xs text-[#617589] dark:text-gray-600">©️ 2026 Fundación Emprende Canarias. Todos los derechos reservados.</p>
+</div>
+</footer>
+
+
+
+
+</div>
+</body></html>

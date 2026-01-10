@@ -1,0 +1,629 @@
+
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Prototipos IA</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1351ec", 
+              "primary-dark": "#0f3cb3",
+              "accent-light": "#e0e7ff",
+              "background-light": "#ffffff",
+              "background-dark": "#101922",
+              "surface-light": "#ffffff",
+              "surface-dark": "#1a2632",
+              "text-main": "#0f172a",
+              "text-secondary": "#64748b",
+              "card-bg": "#ffffff",
+              "dark-card": "#0f172a"
+            },
+            fontFamily: {
+              "display": ["Public Sans", "sans-serif"]
+            },
+            borderRadius: {
+                "DEFAULT": "0.25rem", 
+                "lg": "0.5rem", 
+                "xl": "0.75rem", 
+                "2xl": "1.5rem",
+                "3xl": "2rem",
+                "full": "9999px"
+            },
+            boxShadow: {
+                'soft': '0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02)',
+                'card': '0 10px 40px -10px rgba(0,0,0,0.05)',
+                'card-hover': '0 20px 40px -10px rgba(0,0,0,0.1)'
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-main dark:text-white antialiased transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+
+
+<header class="sticky top-0 z-50 w-full bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-sm pt-4 pb-2">
+<div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined text-2xl">apartment</span>
+</div>
+<div class="flex flex-col">
+<h2 class="text-lg font-extrabold leading-none tracking-tight text-text-main dark:text-white">Fundación Emprende</h2>
+<span class="text-[0.65rem] font-bold tracking-widest text-primary uppercase">Canarias Innova</span>
+</div>
+</div>
+
+
+<div class="flex flex-1 justify-end gap-8">
+            <div class="hidden md:flex items-center gap-9">
+              <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary" href="../index.html">Inicio</a>
+              <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary" href="goblab.html">GobLab</a>
+              <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary" href="prototipos.html">Prototipos</a>
+              <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary" href="mentorias.html">Mentorias</a>
+              <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary" href="programaPiloto.html">Programa de validacion 2026</a>
+            </div>
+
+            <!-- <button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-primary-dark text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+              <span class="truncate">Contacto</span>
+            </button> -->
+
+  <a href="contacto.html"
+   class="flex min-w-[84px] items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-primary-dark text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+  <span class="truncate">Contacto</span>
+  </a>
+
+</div>
+
+<div class="md:hidden">
+<button class="text-text-main dark:text-white p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+
+
+<!-- <main class="flex-grow"> -->
+<!-- Breadcrumbs -->
+<!-- <div class="w-full max-w-[960px] px-6 lg:px-0 pt-8 pb-4">
+<nav class="flex items-center text-sm text-text-sub dark:text-gray-400">
+<a class="hover:text-primary transition-colors" href="#">Inicio</a>
+<span class="material-symbols-outlined text-sm mx-2">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Proyectos de Innovación</a>
+<span class="material-symbols-outlined text-sm mx-2">chevron_right</span>
+<span class="text-text-main dark:text-white font-medium truncate">Asistente Virtual de Atención Ciudadana</span>
+</nav>
+</div> -->
+
+
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative flex flex-col items-center justify-center overflow-hidden bg-background-light dark:bg-background-dark pt-10 pb-16 md:py-20 lg:py-24">
+<div class="absolute inset-0 z-0 opacity-10 dark:opacity-20 pointer-events-none" style="background-image: radial-gradient(#137fec 1px, transparent 1px); background-size: 32px 32px;"></div>
+<div class="layout-content-container flex flex-col max-w-[1100px] w-full px-4 md:px-10 z-10">
+<div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-12">
+<!-- Hero Content -->
+<div class="flex flex-col gap-6 lg:w-1/2">
+<div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary dark:text-blue-400">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Vinculado al Cabildo de Gran Canaria</span>
+</div>
+<h1 class="font-display text-4xl font-black leading-tight tracking-[-0.033em] text-[#111418] dark:text-white md:text-5xl lg:text-6xl">
+                                Nuestros Prototipos <span class="text-primary">IA</span>
+</h1>
+<h2 class="text-lg font-normal leading-relaxed text-[#4e5d6d] dark:text-gray-300">
+                                Laboratorio de innovación pública vinculado al Cabildo de Gran Canaria desde 2023. Impulsamos la inteligencia artificial y la modernización administrativa para servir mejor a la ciudadanía.
+                            </h2>
+<div class="flex flex-wrap gap-4 pt-2">
+
+<!-- <button class="flex cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-blue-600 text-white text-base font-bold transition-all shadow-lg shadow-primary/20">
+                                    Explorar Prototipos
+                                </button> -->
+
+                                <a href="#prototipos"
+   class="flex cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-blue-600 text-white text-base font-bold transition-all shadow-lg shadow-primary/20">
+  Explorar Prototipos
+</a>
+
+
+<!-- <button class="flex cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-white dark:bg-[#1e2a35] border border-[#dbe0e6] dark:border-gray-700 hover:border-primary text-[#111418] dark:text-white text-base font-bold transition-all">
+                                    Conocer metodología
+                                </button> -->
+
+                                <a href="goblab.html#metodologia"
+   class="flex cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-white dark:bg-[#1e2a35] border border-[#dbe0e6] dark:border-gray-700 hover:border-primary text-[#111418] dark:text-white text-base font-bold transition-all">
+  Conocer metodología
+</a>
+
+
+</div>
+</div>
+<!-- Hero Image -->
+<div class="lg:w-1/2 mt-8 lg:mt-0">
+<div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-gray-200 dark:bg-gray-800" data-alt="People collaborating in a modern office with sticky notes on glass wall" style="background-image: url('https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<p class="font-bold text-lg">Innovación en acción</p>
+<p class="text-sm opacity-90">Sesión de co-creación 2024</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Prototypes Section -->
+<section class="py-16 px-4 md:px-10 flex justify-center bg-white dark:bg-[#161e27]" id="prototipos">
+<div class="max-w-[1100px] w-full flex flex-col gap-10">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+<div class="flex flex-col gap-2">
+<h2 class="text-[#111418] dark:text-white text-[32px] font-bold leading-tight">Prototipos desarrollados</h2>
+<p class="text-[#4e5d6d] dark:text-gray-400 text-lg">Explora nuestras últimas soluciones de innovación pública.</p>
+</div>
+<!-- <a class="text-primary font-bold hover:underline inline-flex items-center gap-1" href="#">
+                            Ver todo el portfolio <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a> -->
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+<!-- Project Card 1 -->
+<div class="flex flex-col rounded-xl overflow-hidden border border-[#e5e7eb] dark:border-gray-700 hover:shadow-lg transition-shadow bg-background-light dark:bg-[#1e2a35] group cursor-pointer" onclick="openModal()">
+
+<div class="h-48 bg-gray-200 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Data visualization dashboard on a screen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA9AlJuOLiRzrdrGUwJJQeYUIG91i5u83ZHwyKd2n76peBYRy7uDUPxP43WvQ0vKQ0ZDa4gzE1LxVI8WohSR7ECoYLfx-BZ2zObIHm55TVZURSUAnJpDMpO4sDSF8ugCd3ZhoJjp5lyY4CYr66Ec7fw7eOovtlkRFXVZBsrKVEu27DQShnomewfKUC46o5smsAG1N-M2QsL2rjyU28kexQTcWoXAZqUgd-m5l-k-lu_teZuH0eIJoTwdODBA-yBJ1Ou-sBhXRBfu70');"></div>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-black/80 px-2 py-1 rounded text-xs font-bold text-[#111418] dark:text-white backdrop-blur-sm">
+                                    Modernización
+                                </div>
+</div>
+<div class="flex flex-col p-5 gap-3">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Chatbot Corporativoo</h3>
+<p class="text-sm text-[#4e5d6d] dark:text-gray-400 line-clamp-2">Asistente virtual que atiende consultas ciudadanas en cualquier idioma y horario.</p>
+
+<!-- <a class="mt-2 text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                                    Ver detalles <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
+</a> -->
+
+
+<span class="mt-2 text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all">
+  Ver detalles <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
+</span>
+
+</div>
+</div>
+
+<!-- Project Card 2 -->
+<div class="flex flex-col rounded-xl overflow-hidden border border-[#e5e7eb] dark:border-gray-700 hover:shadow-lg transition-shadow bg-background-light dark:bg-[#1e2a35] group">
+<div class="h-48 bg-gray-200 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Data visualization dashboard on a screen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB360GhV6bNgScyFa1_L5jFmGOeugY548E4G084noZy2H0388uxMjNM9yMtlvmI6TfAUs6dRAg6ChW_73LyNQO2OdJrsupz6SyppYyexrmMJWITy3hROJnJgfItBhLvz5C6gTqQ7DGijRAkLpOaxQaOScRn8EG9dkBuwgDg-d7U87m0lBjndMRn5GmhpO_2Nh7MCqA_TKYGL-i72L4gegBq5tVOvFTgj8bAWDlFFk8wFDOfUdr9AhEue25KEYt2fkOcog19yQ9OZ-U');"></div>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-black/80 px-2 py-1 rounded text-xs font-bold text-[#111418] dark:text-white backdrop-blur-sm">
+                                    Modernización / Contratación
+                                </div>
+</div>
+<div class="flex flex-col p-5 gap-3">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white"> LicitaGC </h3>
+<p class="text-sm text-[#4e5d6d] dark:text-gray-400 line-clamp-2"> Extrae, estructura y organiza información de pliegos y documentos normativos complejos.</p>
+<a class="mt-2 text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                                    Ver detalles <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
+</a>
+</div>
+</div>
+
+<!-- Project Card 3 -->
+<div class="flex flex-col rounded-xl overflow-hidden border border-[#e5e7eb] dark:border-gray-700 hover:shadow-lg transition-shadow bg-background-light dark:bg-[#1e2a35] group">
+<div class="h-48 bg-gray-200 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Data visualization dashboard on a screen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuChaeqRELpJcmkTLuPVE2EmUUayR63ZqyIwl5WwSVBMWAkwddL5i0J0o3XNWsStgfDNfpr9FOi5DsW5RNGfC08GZ7guSmSO8IpcznD-TupV1cbmKyZxdEFaXOwci7GTE3mfN3AWjNJQ71Vy4uxulqCIMNvP805tXOznsZxxoZwSEC0CxjyL0ogHab3NtgwtictdYGdlLVzHHIM3sxoX-RyBEgHF4At2_joMhtAhptB-ETdNB2VdG91sTsvR0Ij0T0zizs9fMMp3Bjo');"></div>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-black/80 px-2 py-1 rounded text-xs font-bold text-[#111418] dark:text-white backdrop-blur-sm">
+                                    Laboratorio de Agricultura y Fitopatología
+                                </div>
+</div>
+<div class="flex flex-col p-5 gap-3">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">FitoBot</h3>
+<p class="text-sm text-[#4e5d6d] dark:text-gray-400 line-clamp-2">Permite a agricultores describir síntomas o enviar imágenes de cultivos para recibir orientación técnica inicial sobre plagas y enfermedades</p>
+<a class="mt-2 text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                                    Ver detalles <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
+</a>
+</div>
+</div>
+
+<!-- Project Card 4 -->
+<div class="flex flex-col rounded-xl overflow-hidden border border-[#e5e7eb] dark:border-gray-700 hover:shadow-lg transition-shadow bg-background-light dark:bg-[#1e2a35] group">
+<div class="h-48 bg-gray-200 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Data visualization dashboard on a screen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB7JaPSboLO8UQUqeJzdiMIBX5z472J1YCyS7HllSLddaQEvLGOmZl9Rkg57cZ_6cVbkUtl9C5942HxcgUlRR7HUe_LFiB73WspGS79PWcfUSwd1DcKkd1-VftWiNn9PsR1vIghMEBRBCMCaZPnsGnCZZ1YgMzYwmiJlwRLUyFEUv8fAhntBSnnnm5EKFg_ZRJ7Ly1A9YDehgeDjIqLnBm_J7BCyzoRB1KkEQ7lakq6KY3q5fLlwrnV478CET5MGtUJJqV2PDE4Y4c');"></div>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-black/80 px-2 py-1 rounded text-xs font-bold text-[#111418] dark:text-white backdrop-blur-sm">
+                                    Transportes
+                                </div>
+</div>
+<div class="flex flex-col p-5 gap-3">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Tacógrafos</h3>
+<p class="text-sm text-[#4e5d6d] dark:text-gray-400 line-clamp-2">Gestiona documentación y verifica el cumplimiento normativo en el transporte de viajeros.</p>
+<a class="mt-2 text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                                    Ver detalles <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
+</a>
+</div>
+</div>
+
+<!-- Project Card 5 -->
+<div class="flex flex-col rounded-xl overflow-hidden border border-[#e5e7eb] dark:border-gray-700 hover:shadow-lg transition-shadow bg-background-light dark:bg-[#1e2a35] group">
+<div class="h-48 bg-gray-200 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Data visualization dashboard on a screen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAD0Kyxvzq0OIgEVNaMQs_ozxnaAmb8jgjjDb4bB1oiYG95xRyEgGccf5NJ9pFwZBHz9BuKtawfgP-h4WVqYgm0zGi8DgQOsHfE1maTIhYFrdhgeS9bsRA1dDGqP_o4l0YYCT0AVXXNtfU2-K0BgS2T7UIOyAa2lbddDQXMVIMWiyPI4KiyRfCtjupWKUiZDqwi1KByvsIgsrlWw2Q8wUFrRgiAWMEA5H7qAUH503G9Z59tLjcEseqCGMlKBV4Iyl3UejI8dII2jzk');"></div>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-black/80 px-2 py-1 rounded text-xs font-bold text-[#111418] dark:text-white backdrop-blur-sm">
+                                    Cooperación institucional
+                                </div>
+</div>
+<div class="flex flex-col p-5 gap-3">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">EIEL</h3>
+<p class="text-sm text-[#4e5d6d] dark:text-gray-400 line-clamp-2">Gestiona información territorial y de infraestructuras.</p>
+<a class="mt-2 text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                                    Ver detalles <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
+</a>
+</div>
+</div>
+
+<!-- Project Card 6 -->
+<div class="flex flex-col rounded-xl overflow-hidden border border-[#e5e7eb] dark:border-gray-700 hover:shadow-lg transition-shadow bg-background-light dark:bg-[#1e2a35] group">
+<div class="h-48 bg-gray-200 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Data visualization dashboard on a screen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBr7j1iO-KFLZJDas0fO1iWVyzgtnnQ7-bKhhpOI5nihY9M4QGEvXAxnYQ9YcRoCfKqpyEuyyPahYMUHV1nGwMTbJrkDngcIBl94sGvQbHk0nCMO-fT8ORxnvaWP_BoX08dud9yUCoXgdWb3KAai-bDTx23Cj2LCqC5W5EPdbb_JPsXvEGo0IawrHT-mZbgAn85WX8TUh-km7vxE6nl1_bObT5ng4YYRGjlZI6SEFG5_XFcEkyEuQkuyf5zW-bDLgWmyBeGv93TMjk');"></div>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-black/80 px-2 py-1 rounded text-xs font-bold text-[#111418] dark:text-white backdrop-blur-sm">
+                                    Empleo
+                                </div>
+</div>
+<div class="flex flex-col p-5 gap-3">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Planes de negocio</h3>
+<p class="text-sm text-[#4e5d6d] dark:text-gray-400 line-clamp-2">Genera documentos estructurados (planes de negocio, memorias, informes) a partir de información proporcionada por el usuario.</p>
+<a class="mt-2 text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                                    Ver detalles <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
+</a>
+</div>
+</div>
+
+<!-- Project Card 7 -->
+<div class="flex flex-col rounded-xl overflow-hidden border border-[#e5e7eb] dark:border-gray-700 hover:shadow-lg transition-shadow bg-background-light dark:bg-[#1e2a35] group">
+<div class="h-48 bg-gray-200 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Data visualization dashboard on a screen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDckR8dp_fdpKV2uKYhjKf1Rmx9hPyIYzS2cbKYHghV2mTlpsTJFfVgPtyXtGCOhS559UBosjuhU_n8ENrkz57xOzTxUD9GcZE-2GsT1IVnhgWOn1Tw_ByeNSsvtT6MF200QEA3uFp4U3G528HR-uSH7MCuc5EAa0ZLW7GXxInnnX5YD8yMGKZloxMVPhfnhIWPvlbjSX2uHBSUW2o6AKqRz6eWvgVpt-5jqLy1wRdrBPYyl2Pr9X8oHJhHNXIQJuLhFMcF2tF2azs');"></div>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-black/80 px-2 py-1 rounded text-xs font-bold text-[#111418] dark:text-white backdrop-blur-sm">
+                                    Obras Públicas
+                                </div>
+</div>
+<div class="flex flex-col p-5 gap-3">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Carreteras</h3>
+<p class="text-sm text-[#4e5d6d] dark:text-gray-400 line-clamp-2">Gestiona incidencias y mantenimiento de infraestructuras viarias.</p>
+<a class="mt-2 text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                                    Ver detalles <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
+</a>
+</div>
+</div>
+
+
+<!-- Project Card 8 -->
+<div class="flex flex-col rounded-xl overflow-hidden border border-[#e5e7eb] dark:border-gray-700 hover:shadow-lg transition-shadow bg-background-light dark:bg-[#1e2a35] group">
+<div class="h-48 bg-gray-200 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="People sitting around a table discussing documents" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnVBo71H7DNTrjQH_mQQhuCZqN7oPlrd-m9zVSiGHGai1uYohtGIkHOF-E-I5cUsGAbpwL8GxYTiLJba0Y9Jqo-dToPNHwzu-umSTEvBqmUb7gNsZe1Ror6CL5Q2_BH_YtkeLw1Kt2v-sRCxTSGv3w4FQ_8z40b96ZWmYlDDhX8tzIhLOpIgsnTFNlSRT81-B7zyJi3022wo-a5mBa5OWsOAa54onM8okAL1l5Y-VD6iAi5pEcMzDWVAWQ_-elUFaLp3cN3YUZ');"></div>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-black/80 px-2 py-1 rounded text-xs font-bold text-[#111418] dark:text-white backdrop-blur-sm">
+                                    Recursos Humanos
+                                </div>
+</div>
+<div class="flex flex-col p-5 gap-3">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Onboarding</h3>
+<p class="text-sm text-[#4e5d6d] dark:text-gray-400 line-clamp-2">Acompaña a las nuevas incorporaciones de personal, resolviendo dudas frecuentes y facilitando el acceso a documentación interna.</p>
+<a class="mt-2 text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                                    Ver detalles <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<!-- Project Card 9 -->
+<div class="flex flex-col rounded-xl overflow-hidden border border-[#e5e7eb] dark:border-gray-700 hover:shadow-lg transition-shadow bg-background-light dark:bg-[#1e2a35] group">
+<div class="h-48 bg-gray-200 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Abstract digital network visualization" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVba51wTjuO41Kf2qKbYGr57o_sVWEpM6qVgFv225Y7o5faIQhl5ZdbQ_Ec6qkHQnjqukNYWN3Y2e4MMngPMr3YgAEd_CNTdFLPuxRurYIRBhIdcegdYOzh_KyQ5yQYa36Okwja3njGhmEQ7OJ0KK9f9u_AGnkyO55NetjknExcjtpYdU1uLlZs-vKJYq-7G7MwQPOAdS1PvUNuOFLyAdd_TeeTvT-q7dIF3itBXCKHKREiLjy7xXnAD_37JzKkmGE3JVUfWtP');"></div>
+<div class="absolute top-3 left-3 bg-white/90 dark:bg-black/80 px-2 py-1 rounded text-xs font-bold text-[#111418] dark:text-white backdrop-blur-sm">
+                                    Modernización
+                                </div>
+</div>
+<div class="flex flex-col p-5 gap-3">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Calculadora AGE</h3>
+<p class="text-sm text-[#4e5d6d] dark:text-gray-400 line-clamp-2">Calcula las cargas administrativas de los procedimientos.</p>
+<a class="mt-2 text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                                    Ver detalles <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- Hero / Page Heading -->
+<!-- <div class="w-full max-w-[960px] px-6 lg:px-0 pb-8">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-6 border-b border-border-light dark:border-border-dark pb-8">
+<div class="flex flex-col gap-3 max-w-2xl">
+<div class="flex items-center gap-3 mb-1">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-bold bg-blue-100 text-primary dark:bg-primary/20 dark:text-blue-300 uppercase tracking-wide">
+                            Inteligencia Artificial
+                        </span>
+<span class="text-text-sub dark:text-gray-400 text-sm">Ref: PRT-2023-089</span>
+</div>
+<h1 class="text-3xl md:text-4xl font-black text-text-main dark:text-white leading-tight tracking-tight">
+                        Asistente Virtual de Atención Ciudadana
+                    </h1>
+<p class="text-lg text-text-sub dark:text-gray-300 leading-relaxed">
+                        Un sistema de triaje inteligente que utiliza IA generativa para categorizar y responder consultas ciudadanas, reduciendo tiempos de espera en ventanilla única.
+                    </p>
+</div>
+<div class="flex-shrink-0">
+<div class="inline-flex flex-col items-end gap-2">
+<span class="text-xs font-semibold text-text-sub dark:text-gray-400 uppercase tracking-wider">Estado Actual</span>
+<div class="flex items-center gap-2 px-4 py-2 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700/50 rounded-lg">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
+</span>
+<span class="text-amber-800 dark:text-amber-200 text-sm font-bold">En fase de validación</span>
+</div>
+</div>
+</div>
+</div>
+</div> -->
+
+
+<!-- Project Metadata Grid -->
+
+<!-- <div class="w-full max-w-[960px] px-6 lg:px-0 pb-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4"> -->
+
+<!-- Card 1: Origin -->
+
+<!-- <div class="flex items-start gap-4 p-5 rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark shadow-sm">
+<div class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-primary">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold text-text-sub dark:text-gray-400 uppercase tracking-wider mb-1">Área Pública de Origen</span>
+<span class="text-lg font-bold text-text-main dark:text-white leading-tight">Cabildo de Gran Canaria</span>
+<span class="text-sm text-text-sub dark:text-gray-400">Consejería de Participación Ciudadana</span>
+</div>
+</div> -->
+
+<!-- Card 2: Capability -->
+
+<!-- <div class="flex items-start gap-4 p-5 rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark shadow-sm">
+<div class="p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg text-purple-600 dark:text-purple-300">
+<span class="material-symbols-outlined">neurology</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold text-text-sub dark:text-gray-400 uppercase tracking-wider mb-1">Capacidad Subyacente</span>
+<span class="text-lg font-bold text-text-main dark:text-white leading-tight">NLP &amp; LLMs</span>
+<span class="text-sm text-text-sub dark:text-gray-400">Modelos de Lenguaje Masivos</span>
+</div>
+</div>
+</div>
+</div> -->
+
+<!-- Detailed Description Section -->
+
+<!-- <div class="w-full max-w-[960px] px-6 lg:px-0 pb-16">
+<div class="flex flex-col lg:flex-row gap-12"> -->
+
+<!-- Main Description -->
+
+<!-- <div class="flex-1 flex flex-col gap-8">
+<div>
+<h2 class="text-2xl font-bold text-text-main dark:text-white mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">info</span>
+                            Qué hace este prototipo
+                        </h2>
+<div class="prose prose-lg dark:prose-invert text-text-sub dark:text-gray-300">
+<p class="mb-4">
+                                Este sistema implementa un modelo de inteligencia artificial entrenado con la base de conocimiento administrativa local. Su función principal es actuar como una primera capa de interacción con la ciudadanía, capaz de:
+                            </p>
+<ul class="space-y-3 mb-6 list-none pl-0">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-green-600 dark:text-green-400 shrink-0 mt-0.5">check_circle</span>
+<span>Comprender consultas formuladas en lenguaje natural, incluyendo modismos locales.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-green-600 dark:text-green-400 shrink-0 mt-0.5">check_circle</span>
+<span>Clasificar automáticamente la urgencia y el departamento destino de cada solicitud.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-green-600 dark:text-green-400 shrink-0 mt-0.5">check_circle</span>
+<span>Generar borradores de respuesta para los funcionarios, reduciendo el tiempo de redacción en un 60%.</span>
+</li>
+</ul>
+<p>
+                                El objetivo final no es reemplazar la atención humana, sino liberar a los funcionarios de tareas repetitivas para que puedan centrarse en casos complejos que requieren empatía y juicio experto.
+                            </p>
+</div>
+</div> -->
+
+
+
+
+<!-- Visual Timeline -->
+
+<!-- <div class="bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-xl p-6">
+<h3 class="text-sm font-bold text-text-sub dark:text-gray-400 uppercase tracking-wider mb-6">Hoja de Ruta del Proyecto</h3>
+<div class="relative flex items-center justify-between w-full">
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-full h-1 bg-gray-100 dark:bg-gray-700 rounded-full -z-10"></div> -->
+
+<!-- Step 1 -->
+
+<!-- <div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold ring-4 ring-white dark:ring-surface-dark">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<span class="text-xs font-medium text-text-main dark:text-white">Diseño</span>
+</div> -->
+
+<!-- Step 2 -->
+
+<!-- <div class="flex flex-col items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold ring-4 ring-white dark:ring-surface-dark">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<span class="text-xs font-medium text-text-main dark:text-white">Prototipado</span>
+</div> -->
+
+<!-- Step 3 (Current) -->
+
+<!-- <div class="flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-amber-500 text-white flex items-center justify-center shadow-lg ring-4 ring-white dark:ring-surface-dark">
+<span class="material-symbols-outlined animate-pulse">science</span>
+</div>
+<span class="text-xs font-bold text-amber-600 dark:text-amber-400">Validación</span>
+</div> -->
+
+<!-- Step 4 -->
+
+<!-- <div class="flex flex-col items-center gap-2 opacity-50">
+<div class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-600 text-gray-500 dark:text-gray-400 flex items-center justify-center text-xs font-bold ring-4 ring-white dark:ring-surface-dark">
+                                    4
+                                </div>
+<span class="text-xs font-medium text-text-sub dark:text-gray-400">Escalado</span>
+</div>
+</div>
+</div>
+</div> -->
+
+<!-- Sidebar / KPI -->
+
+<!-- <div class="lg:w-80 flex flex-col gap-6">
+<div class="rounded-xl overflow-hidden border border-border-light dark:border-border-dark shadow-sm bg-surface-light dark:bg-surface-dark">
+<div class="h-40 bg-gray-100 relative"> -->
+
+<!-- Image placeholder with required data-alt -->
+
+<!-- <img alt="Data visualization dashboard screen" class="w-full h-full object-cover" data-alt="Abstract data visualization showing graphs and digital connections representing AI analysis" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmFsC4ZrBFPupHgm0wTFwSBtIZaoPMYp3Driuh2WVOPCG6xBYdIS1Xk1RbQ7RQSvT3kvCCFHeA-hSr99LReuTYXxnoXtcM8E48Lp-CPAraVmbhD0LB6dGNouvSLmfS64YmfE7bSkt1PsvbosNaIhhv_n_dhJcyarCOQfo_lXRdJAX2qvutSlrM2SrCCxx2L4EnBVfZlDvl0ic4kz5SG-lV5COZhW1_PnO3tq1VQdC4DUzdGjyPC42jmGw6YTKEyi4b94i19eXk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+<div class="absolute bottom-3 left-4 text-white font-medium text-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">image</span> Captura del prototipo v0.4
+                            </div>
+</div>
+<div class="p-5 flex flex-col gap-4">
+<h3 class="font-bold text-text-main dark:text-white">Recursos Relacionados</h3>
+<a class="flex items-center gap-3 p-3 rounded-lg hover:bg-background-light dark:hover:bg-background-dark/50 border border-transparent hover:border-border-light dark:hover:border-border-dark transition-all group" href="#">
+<div class="text-red-500 bg-red-50 dark:bg-red-900/20 p-2 rounded">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-text-main dark:text-white group-hover:text-primary transition-colors">Ficha Técnica PDF</span>
+<span class="text-xs text-text-sub dark:text-gray-400">2.4 MB • Descargar</span>
+</div>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-lg hover:bg-background-light dark:hover:bg-background-dark/50 border border-transparent hover:border-border-light dark:hover:border-border-dark transition-all group" href="#">
+<div class="text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 p-2 rounded">
+<span class="material-symbols-outlined">code</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-text-main dark:text-white group-hover:text-primary transition-colors">Repositorio GitHub</span>
+<span class="text-xs text-text-sub dark:text-gray-400">Open Source</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div> -->
+
+
+<!-- Institutional CTA Section -->
+<div class="w-full bg-surface-light dark:bg-surface-dark border-y border-border-light dark:border-border-dark py-12 lg:py-16">
+<div class="layout-container flex justify-center">
+<div class="layout-content-container flex flex-col max-w-[960px] w-full px-6 lg:px-0">
+<div class="bg-primary/5 dark:bg-primary/10 rounded-2xl p-8 lg:p-10 border border-primary/20 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+<!-- Decorative background element -->
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="flex flex-col gap-4 relative z-10 max-w-xl">
+<h2 class="text-2xl md:text-3xl font-black text-text-main dark:text-white tracking-tight">
+                                ¿Eres una administración pública?
+                            </h2>
+<p class="text-text-sub dark:text-gray-300 text-lg">
+                                Únete al <span class="font-bold text-primary">Programa de Validación</span> del GobLab. Implementa este prototipo en tu entidad y ayúdanos a perfeccionarlo con datos reales.
+                            </p>
+</div>
+<div class="flex flex-col gap-3 relative z-10 w-full md:w-auto">
+
+<!-- <button class="flex items-center justify-center gap-2 h-12 px-8 bg-primary hover:bg-primary-dark text-white font-bold rounded-lg transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 whitespace-nowrap">
+<span class="material-symbols-outlined">handshake</span>
+                                Solicitar Adhesión
+                            </button> -->
+
+                            <a href="contacto.html"
+   class="flex items-center justify-center gap-2 h-12 px-8 bg-primary hover:bg-primary-dark text-white font-bold rounded-lg transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 whitespace-nowrap">
+  <span class="material-symbols-outlined">handshake</span>
+  Solicitar Adhesión
+</a>
+
+
+<!-- <span class="text-xs text-center text-text-sub dark:text-gray-400">Gratuito para entidades canarias</span> -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer class="bg-background-light dark:bg-background-dark border-t border-[#f0f2f4] dark:border-[#2a3441] py-10">
+<div class="layout-container flex justify-center w-full">
+<div class="px-4 lg:px-40 flex flex-1 justify-center">
+<div class="layout-content-container flex flex-col md:flex-row justify-between max-w-[960px] flex-1 px-4 gap-8">
+<div class="flex flex-col gap-4 max-w-[300px]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">account_balance</span>
+<span class="text-[#111418] dark:text-white font-bold">Fundación Emprende Canarias</span>
+</div>
+<p class="text-sm text-[#617589] dark:text-gray-500">Impulsando la innovación y la transformación digital en el sector público de Canarias.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-[#111418] dark:text-white font-bold text-sm uppercase tracking-wider">Enlaces</h4>
+<div class="flex flex-col gap-2">
+<a class="text-sm text-[#617589] dark:text-gray-400 hover:text-primary" href="#">Bases Legales</a>
+<a class="text-sm text-[#617589] dark:text-gray-400 hover:text-primary" href="#">Política de Privacidad</a>
+<a class="text-sm text-[#617589] dark:text-gray-400 hover:text-primary" href="#">GobLab Gran Canaria</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-[#111418] dark:text-white font-bold text-sm uppercase tracking-wider">Contacto</h4>
+<div class="flex flex-col gap-2">
+<a class="text-sm text-[#617589] dark:text-gray-400 hover:text-primary flex items-center gap-2" href="mailto:hola@emprendecanarias.org">
+<span class="material-symbols-outlined text-base">mail</span> hola@emprendecanarias.org
+                            </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mt-10 pt-6 border-t border-gray-200 dark:border-gray-800">
+<p class="text-xs text-[#617589] dark:text-gray-600">©️ 2026 Fundación Emprende Canarias. Todos los derechos reservados.</p>
+</div>
+</footer>
+
+
+
+
+
+<script>
+  function openModal() {
+    document.getElementById('modal').classList.remove('hidden');
+  }
+
+  function closeModal() {
+    document.getElementById('modal').classList.add('hidden');
+  }
+</script>
+
+</body></html>
