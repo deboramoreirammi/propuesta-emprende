@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html class="light" lang="es"><head>
@@ -70,7 +69,7 @@
             <div class="hidden md:flex items-center gap-9">
               <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary" href="../index.html">Inicio</a>
               <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary" href="goblab.html">GobLab</a>
-              <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary" href="prototipos.html">Prototipos</a>
+              <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal text-primary font-bold" href="prototipos.html">Prototipos</a>
               <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary" href="mentorias.html">Mentorias</a>
               <a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary" href="programaPiloto.html">Programa de validacion 2026</a>
             </div>
@@ -79,10 +78,10 @@
               <span class="truncate">Contacto</span>
             </button> -->
 
-  <a href="contacto.html"
+                  <a href="contacto.html"
    class="flex min-w-[84px] items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-primary-dark text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
   <span class="truncate">Contacto</span>
-  </a>
+</a>
 
 </div>
 
@@ -95,25 +94,15 @@
 </header>
 
 
-<!-- <main class="flex-grow"> -->
-<!-- Breadcrumbs -->
-<!-- <div class="w-full max-w-[960px] px-6 lg:px-0 pt-8 pb-4">
-<nav class="flex items-center text-sm text-text-sub dark:text-gray-400">
-<a class="hover:text-primary transition-colors" href="#">Inicio</a>
-<span class="material-symbols-outlined text-sm mx-2">chevron_right</span>
-<a class="hover:text-primary transition-colors" href="#">Proyectos de Innovación</a>
-<span class="material-symbols-outlined text-sm mx-2">chevron_right</span>
-<span class="text-text-main dark:text-white font-medium truncate">Asistente Virtual de Atención Ciudadana</span>
-</nav>
-</div> -->
-
 
 <main class="flex-grow">
+
 <!-- Hero Section -->
 <section class="relative flex flex-col items-center justify-center overflow-hidden bg-background-light dark:bg-background-dark pt-10 pb-16 md:py-20 lg:py-24">
 <div class="absolute inset-0 z-0 opacity-10 dark:opacity-20 pointer-events-none" style="background-image: radial-gradient(#137fec 1px, transparent 1px); background-size: 32px 32px;"></div>
 <div class="layout-content-container flex flex-col max-w-[1100px] w-full px-4 md:px-10 z-10">
 <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-12">
+
 <!-- Hero Content -->
 <div class="flex flex-col gap-6 lg:w-1/2">
 <div class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary dark:text-blue-400">
@@ -137,19 +126,14 @@
   Explorar Prototipos
 </a>
 
-
-<!-- <button class="flex cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-white dark:bg-[#1e2a35] border border-[#dbe0e6] dark:border-gray-700 hover:border-primary text-[#111418] dark:text-white text-base font-bold transition-all">
-                                    Conocer metodología
-                                </button> -->
-
-                                <a href="goblab.html#metodologia"
+<a href="goblab.html#metodologia"
    class="flex cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-white dark:bg-[#1e2a35] border border-[#dbe0e6] dark:border-gray-700 hover:border-primary text-[#111418] dark:text-white text-base font-bold transition-all">
   Conocer metodología
 </a>
 
+</div>
+</div>
 
-</div>
-</div>
 <!-- Hero Image -->
 <div class="lg:w-1/2 mt-8 lg:mt-0">
 <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-gray-200 dark:bg-gray-800" data-alt="People collaborating in a modern office with sticky notes on glass wall" style="background-image: url('https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260'); background-size: cover; background-position: center;">
@@ -167,15 +151,30 @@
 <!-- Prototypes Section -->
 <section class="py-16 px-4 md:px-10 flex justify-center bg-white dark:bg-[#161e27]" id="prototipos">
 <div class="max-w-[1100px] w-full flex flex-col gap-10">
+
+
 <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
 <div class="flex flex-col gap-2">
 <h2 class="text-[#111418] dark:text-white text-[32px] font-bold leading-tight">Prototipos desarrollados</h2>
 <p class="text-[#4e5d6d] dark:text-gray-400 text-lg">Explora nuestras últimas soluciones de innovación pública.</p>
 </div>
+
 <!-- <a class="text-primary font-bold hover:underline inline-flex items-center gap-1" href="#">
                             Ver todo el portfolio <span class="material-symbols-outlined text-sm">arrow_forward</span>
 </a> -->
+
+
+<button
+  id="togglePrototypes"
+  class="text-primary font-bold hover:underline inline-flex items-center gap-1"
+>
+  Ver todo <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+
+
 </div>
+
+<!-- GRID PRINCIPAL -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
 <!-- Project Card 1 -->
@@ -191,15 +190,9 @@
 <h3 class="text-lg font-bold text-[#111418] dark:text-white">Chatbot Corporativoo</h3>
 <p class="text-sm text-[#4e5d6d] dark:text-gray-400 line-clamp-2">Asistente virtual que atiende consultas ciudadanas en cualquier idioma y horario.</p>
 
-<!-- <a class="mt-2 text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all" href="#">
+<a class="mt-2 text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all" href="#">
                                     Ver detalles <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
-</a> -->
-
-
-<span class="mt-2 text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all">
-  Ver detalles <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
-</span>
-
+</a>
 </div>
 </div>
 
@@ -236,6 +229,16 @@
 </a>
 </div>
 </div>
+
+</div>
+
+<!-- GRID OCULTO (MISMO NIVEL, NO DENTRO) -->
+ <div
+  id="morePrototypes"
+  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 hidden"
+>
+
+
 
 <!-- Project Card 4 -->
 <div class="flex flex-col rounded-xl overflow-hidden border border-[#e5e7eb] dark:border-gray-700 hover:shadow-lg transition-shadow bg-background-light dark:bg-[#1e2a35] group">
@@ -338,202 +341,10 @@
 </a>
 </div>
 </div>
-</div>
+
 </div>
 </section>
 
-
-<!-- Hero / Page Heading -->
-<!-- <div class="w-full max-w-[960px] px-6 lg:px-0 pb-8">
-<div class="flex flex-col md:flex-row md:items-start justify-between gap-6 border-b border-border-light dark:border-border-dark pb-8">
-<div class="flex flex-col gap-3 max-w-2xl">
-<div class="flex items-center gap-3 mb-1">
-<span class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-bold bg-blue-100 text-primary dark:bg-primary/20 dark:text-blue-300 uppercase tracking-wide">
-                            Inteligencia Artificial
-                        </span>
-<span class="text-text-sub dark:text-gray-400 text-sm">Ref: PRT-2023-089</span>
-</div>
-<h1 class="text-3xl md:text-4xl font-black text-text-main dark:text-white leading-tight tracking-tight">
-                        Asistente Virtual de Atención Ciudadana
-                    </h1>
-<p class="text-lg text-text-sub dark:text-gray-300 leading-relaxed">
-                        Un sistema de triaje inteligente que utiliza IA generativa para categorizar y responder consultas ciudadanas, reduciendo tiempos de espera en ventanilla única.
-                    </p>
-</div>
-<div class="flex-shrink-0">
-<div class="inline-flex flex-col items-end gap-2">
-<span class="text-xs font-semibold text-text-sub dark:text-gray-400 uppercase tracking-wider">Estado Actual</span>
-<div class="flex items-center gap-2 px-4 py-2 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700/50 rounded-lg">
-<span class="relative flex h-3 w-3">
-<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-<span class="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
-</span>
-<span class="text-amber-800 dark:text-amber-200 text-sm font-bold">En fase de validación</span>
-</div>
-</div>
-</div>
-</div>
-</div> -->
-
-
-<!-- Project Metadata Grid -->
-
-<!-- <div class="w-full max-w-[960px] px-6 lg:px-0 pb-10">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4"> -->
-
-<!-- Card 1: Origin -->
-
-<!-- <div class="flex items-start gap-4 p-5 rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark shadow-sm">
-<div class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-primary">
-<span class="material-symbols-outlined">account_balance</span>
-</div>
-<div class="flex flex-col">
-<span class="text-xs font-bold text-text-sub dark:text-gray-400 uppercase tracking-wider mb-1">Área Pública de Origen</span>
-<span class="text-lg font-bold text-text-main dark:text-white leading-tight">Cabildo de Gran Canaria</span>
-<span class="text-sm text-text-sub dark:text-gray-400">Consejería de Participación Ciudadana</span>
-</div>
-</div> -->
-
-<!-- Card 2: Capability -->
-
-<!-- <div class="flex items-start gap-4 p-5 rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark shadow-sm">
-<div class="p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg text-purple-600 dark:text-purple-300">
-<span class="material-symbols-outlined">neurology</span>
-</div>
-<div class="flex flex-col">
-<span class="text-xs font-bold text-text-sub dark:text-gray-400 uppercase tracking-wider mb-1">Capacidad Subyacente</span>
-<span class="text-lg font-bold text-text-main dark:text-white leading-tight">NLP &amp; LLMs</span>
-<span class="text-sm text-text-sub dark:text-gray-400">Modelos de Lenguaje Masivos</span>
-</div>
-</div>
-</div>
-</div> -->
-
-<!-- Detailed Description Section -->
-
-<!-- <div class="w-full max-w-[960px] px-6 lg:px-0 pb-16">
-<div class="flex flex-col lg:flex-row gap-12"> -->
-
-<!-- Main Description -->
-
-<!-- <div class="flex-1 flex flex-col gap-8">
-<div>
-<h2 class="text-2xl font-bold text-text-main dark:text-white mb-4 flex items-center gap-2">
-<span class="material-symbols-outlined text-primary">info</span>
-                            Qué hace este prototipo
-                        </h2>
-<div class="prose prose-lg dark:prose-invert text-text-sub dark:text-gray-300">
-<p class="mb-4">
-                                Este sistema implementa un modelo de inteligencia artificial entrenado con la base de conocimiento administrativa local. Su función principal es actuar como una primera capa de interacción con la ciudadanía, capaz de:
-                            </p>
-<ul class="space-y-3 mb-6 list-none pl-0">
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-green-600 dark:text-green-400 shrink-0 mt-0.5">check_circle</span>
-<span>Comprender consultas formuladas en lenguaje natural, incluyendo modismos locales.</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-green-600 dark:text-green-400 shrink-0 mt-0.5">check_circle</span>
-<span>Clasificar automáticamente la urgencia y el departamento destino de cada solicitud.</span>
-</li>
-<li class="flex items-start gap-3">
-<span class="material-symbols-outlined text-green-600 dark:text-green-400 shrink-0 mt-0.5">check_circle</span>
-<span>Generar borradores de respuesta para los funcionarios, reduciendo el tiempo de redacción en un 60%.</span>
-</li>
-</ul>
-<p>
-                                El objetivo final no es reemplazar la atención humana, sino liberar a los funcionarios de tareas repetitivas para que puedan centrarse en casos complejos que requieren empatía y juicio experto.
-                            </p>
-</div>
-</div> -->
-
-
-
-
-<!-- Visual Timeline -->
-
-<!-- <div class="bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-xl p-6">
-<h3 class="text-sm font-bold text-text-sub dark:text-gray-400 uppercase tracking-wider mb-6">Hoja de Ruta del Proyecto</h3>
-<div class="relative flex items-center justify-between w-full">
-<div class="absolute left-0 top-1/2 -translate-y-1/2 w-full h-1 bg-gray-100 dark:bg-gray-700 rounded-full -z-10"></div> -->
-
-<!-- Step 1 -->
-
-<!-- <div class="flex flex-col items-center gap-2">
-<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold ring-4 ring-white dark:ring-surface-dark">
-<span class="material-symbols-outlined text-sm">check</span>
-</div>
-<span class="text-xs font-medium text-text-main dark:text-white">Diseño</span>
-</div> -->
-
-<!-- Step 2 -->
-
-<!-- <div class="flex flex-col items-center gap-2">
-<div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold ring-4 ring-white dark:ring-surface-dark">
-<span class="material-symbols-outlined text-sm">check</span>
-</div>
-<span class="text-xs font-medium text-text-main dark:text-white">Prototipado</span>
-</div> -->
-
-<!-- Step 3 (Current) -->
-
-<!-- <div class="flex flex-col items-center gap-2">
-<div class="w-10 h-10 rounded-full bg-amber-500 text-white flex items-center justify-center shadow-lg ring-4 ring-white dark:ring-surface-dark">
-<span class="material-symbols-outlined animate-pulse">science</span>
-</div>
-<span class="text-xs font-bold text-amber-600 dark:text-amber-400">Validación</span>
-</div> -->
-
-<!-- Step 4 -->
-
-<!-- <div class="flex flex-col items-center gap-2 opacity-50">
-<div class="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-600 text-gray-500 dark:text-gray-400 flex items-center justify-center text-xs font-bold ring-4 ring-white dark:ring-surface-dark">
-                                    4
-                                </div>
-<span class="text-xs font-medium text-text-sub dark:text-gray-400">Escalado</span>
-</div>
-</div>
-</div>
-</div> -->
-
-<!-- Sidebar / KPI -->
-
-<!-- <div class="lg:w-80 flex flex-col gap-6">
-<div class="rounded-xl overflow-hidden border border-border-light dark:border-border-dark shadow-sm bg-surface-light dark:bg-surface-dark">
-<div class="h-40 bg-gray-100 relative"> -->
-
-<!-- Image placeholder with required data-alt -->
-
-<!-- <img alt="Data visualization dashboard screen" class="w-full h-full object-cover" data-alt="Abstract data visualization showing graphs and digital connections representing AI analysis" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmFsC4ZrBFPupHgm0wTFwSBtIZaoPMYp3Driuh2WVOPCG6xBYdIS1Xk1RbQ7RQSvT3kvCCFHeA-hSr99LReuTYXxnoXtcM8E48Lp-CPAraVmbhD0LB6dGNouvSLmfS64YmfE7bSkt1PsvbosNaIhhv_n_dhJcyarCOQfo_lXRdJAX2qvutSlrM2SrCCxx2L4EnBVfZlDvl0ic4kz5SG-lV5COZhW1_PnO3tq1VQdC4DUzdGjyPC42jmGw6YTKEyi4b94i19eXk"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-<div class="absolute bottom-3 left-4 text-white font-medium text-sm flex items-center gap-2">
-<span class="material-symbols-outlined text-sm">image</span> Captura del prototipo v0.4
-                            </div>
-</div>
-<div class="p-5 flex flex-col gap-4">
-<h3 class="font-bold text-text-main dark:text-white">Recursos Relacionados</h3>
-<a class="flex items-center gap-3 p-3 rounded-lg hover:bg-background-light dark:hover:bg-background-dark/50 border border-transparent hover:border-border-light dark:hover:border-border-dark transition-all group" href="#">
-<div class="text-red-500 bg-red-50 dark:bg-red-900/20 p-2 rounded">
-<span class="material-symbols-outlined">description</span>
-</div>
-<div class="flex flex-col">
-<span class="text-sm font-semibold text-text-main dark:text-white group-hover:text-primary transition-colors">Ficha Técnica PDF</span>
-<span class="text-xs text-text-sub dark:text-gray-400">2.4 MB • Descargar</span>
-</div>
-</a>
-<a class="flex items-center gap-3 p-3 rounded-lg hover:bg-background-light dark:hover:bg-background-dark/50 border border-transparent hover:border-border-light dark:hover:border-border-dark transition-all group" href="#">
-<div class="text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 p-2 rounded">
-<span class="material-symbols-outlined">code</span>
-</div>
-<div class="flex flex-col">
-<span class="text-sm font-semibold text-text-main dark:text-white group-hover:text-primary transition-colors">Repositorio GitHub</span>
-<span class="text-xs text-text-sub dark:text-gray-400">Open Source</span>
-</div>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div> -->
 
 
 <!-- Institutional CTA Section -->
@@ -553,10 +364,7 @@
 </div>
 <div class="flex flex-col gap-3 relative z-10 w-full md:w-auto">
 
-<!-- <button class="flex items-center justify-center gap-2 h-12 px-8 bg-primary hover:bg-primary-dark text-white font-bold rounded-lg transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 whitespace-nowrap">
-<span class="material-symbols-outlined">handshake</span>
-                                Solicitar Adhesión
-                            </button> -->
+
 
                             <a href="contacto.html"
    class="flex items-center justify-center gap-2 h-12 px-8 bg-primary hover:bg-primary-dark text-white font-bold rounded-lg transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 whitespace-nowrap">
@@ -572,7 +380,6 @@
 </div>
 </div>
 </main>
-
 
 
 <!-- Footer -->
@@ -612,11 +419,20 @@
 </div>
 </footer>
 
-
-
-
-
 <script>
+  const button = document.getElementById("togglePrototypes");
+  const more = document.getElementById("morePrototypes");
+
+  button.addEventListener("click", () => {
+    more.classList.toggle("hidden");
+
+    button.innerHTML = more.classList.contains("hidden")
+      ? 'Ver todo <span class="material-symbols-outlined text-sm">arrow_forward</span>'
+      : 'Ver menos <span class="material-symbols-outlined text-sm">expand_less</span>';
+  });
+</script>
+
+<!-- <script>
   function openModal() {
     document.getElementById('modal').classList.remove('hidden');
   }
@@ -624,6 +440,6 @@
   function closeModal() {
     document.getElementById('modal').classList.add('hidden');
   }
-</script>
+</script> -->
 
 </body></html>
