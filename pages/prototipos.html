@@ -11,17 +11,24 @@
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
             colors: {
-              "primary": "#1351ec", 
-              "primary-dark": "#0f3cb3",
-              "accent-light": "#e0e7ff",
-              "background-light": "#ffffff",
-              "background-dark": "#101922",
+              // "primary": "#1351ec", 
+              // "primary-dark": "#0f3cb3",
+              // "accent-light": "#e0e7ff",
+              // "background-light": "#ffffff",
+              // "background-dark": "#101922",
+                "primary": "#dc2626",          // antes #1351ec
+                "primary-dark": "#b91c1c",     // antes #0f3cb3
+                "accent-light": "#fee2e2",     // rojo claro (antes azul claro)
+                "background-light": "#f6f7f8", // gris claro como ellos
+
               "surface-light": "#ffffff",
               "surface-dark": "#1a2632",
               "text-main": "#0f172a",
@@ -49,6 +56,8 @@
         },
       }
     </script>
+
+
 </head>
 <body class="font-display bg-background-light dark:bg-background-dark text-text-main dark:text-white antialiased transition-colors duration-200">
 <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
