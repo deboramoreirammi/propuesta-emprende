@@ -13,30 +13,54 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Tailwind Configuration -->
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#137fec",
-                        "background-light": "#f6f7f8",
-                        "background-dark": "#101922",
-                    },
-                    fontFamily: {
-                        "display": ["Public Sans", "sans-serif"]
-                    },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-                },
+
+
+
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              // "primary": "#1351ec", 
+              // "primary-dark": "#0f3cb3",
+              // "accent-light": "#e0e7ff",
+              // "background-light": "#ffffff",
+              // "background-dark": "#101922",
+                "primary": "#dc2626",          // antes #1351ec
+                "primary-dark": "#b91c1c",     // antes #0f3cb3
+                "accent-light": "#fee2e2",     // rojo claro (antes azul claro)
+                "background-light": "#f6f7f8", // gris claro como ellos
+
+              "surface-light": "#ffffff",
+              "surface-dark": "#1a2632",
+              "text-main": "#0f172a",
+              "text-secondary": "#64748b",
+              "card-bg": "#ffffff",
+              "dark-card": "#0f172a"
             },
-        }
+            fontFamily: {
+              "display": ["Public Sans", "sans-serif"]
+            },
+            borderRadius: {
+                "DEFAULT": "0.25rem", 
+                "lg": "0.5rem", 
+                "xl": "0.75rem", 
+                "2xl": "1.5rem",
+                "3xl": "2rem",
+                "full": "9999px"
+            },
+            boxShadow: {
+                'soft': '0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02)',
+                'card': '0 10px 40px -10px rgba(0,0,0,0.05)',
+                'card-hover': '0 20px 40px -10px rgba(0,0,0,0.1)'
+            }
+          },
+        },
+      }
     </script>
-<style>
-        body {
-            font-family: 'Public Sans', sans-serif;
-        }
-    </style>
+
+
 </head>
 <body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white">
 <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
